@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff6fb" />
+  <title>Sweet Match</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">A little puzzle break</p>
+        <h1>Sweet Match</h1>
+      </div>
+      <button class="icon-button" id="soundBtn" aria-label="Toggle sound" title="Toggle sound">♪</button>
+    </header>
+
+    <section class="game-card" aria-label="Match three game">
+      <div class="stats">
+        <div class="stat"><span class="stat-label">LEVEL</span><strong id="level">1</strong></div>
+        <div class="stat score-stat"><span class="stat-label">SCORE</span><strong id="score">0</strong><span class="target" id="target">/ 500</span></div>
+        <div class="stat"><span class="stat-label">MOVES</span><strong id="moves">25</strong></div>
+      </div>
+      <div class="progress-track" aria-label="Level progress"><div class="progress-fill" id="progress"></div></div>
+      <p class="message" id="message" aria-live="polite">Swap two sweets to match three or more!</p>
+      <div id="board" class="board" role="grid" aria-label="Game board"></div>
+      <div class="controls">
+        <button class="secondary-button" id="hintBtn">✨ Hint</button>
+        <button class="secondary-button" id="restartBtn">↻ Restart</button>
+      </div>
+    </section>
+    <p class="footer-note">Free to play · No ads · Your progress stays on this device</p>
+  </main>
+  <div class="dialog-backdrop" id="dialog" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+      <div class="dialog-sparkle" id="dialogIcon">🍭</div>
+      <h2 id="dialogTitle">Sweet!</h2>
+      <p id="dialogText"></p>
+      <button class="primary-button" id="continueBtn">Continue</button>
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
